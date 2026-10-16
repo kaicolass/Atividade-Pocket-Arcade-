@@ -6,4 +6,6 @@
     <integer name="duracao_escolha">450</integer>
     <integer name="atraso_escolha_dispositivo">150</integer>
     <integer name="duracao_campeao">600</integer>
+    <integer name="duracao_linha_historico">300</integer>
+    <integer name="duracao_tremer">500</integer>
 </resources>

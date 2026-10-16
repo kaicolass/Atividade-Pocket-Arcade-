@@ -21,4 +21,5 @@
     <dimen name="espessura_divisor">1dp</dimen>
     <dimen name="tamanho_jogada">72dp</dimen>
     <dimen name="padding_jogada">14dp</dimen>
+    <dimen name="padding_legenda">6dp</dimen>
 </resources>

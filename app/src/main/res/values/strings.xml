@@ -76,4 +76,29 @@
     <string name="desc_jogar_tesoura">Jogar tesoura</string>
     <string name="desc_escolha_jogador">Jogada escolhida por você</string>
     <string name="desc_escolha_dispositivo">Jogada sorteada pelo celular</string>
+
+    <string name="cofre_legenda_certa">Lugar certo</string>
+    <string name="cofre_legenda_outro_lugar">Outro lugar</string>
+    <string name="cofre_legenda_ausente">Não tem</string>
+    <string name="cofre_tentativas">Tentativas usadas: %1$d de %2$d</string>
+    <string name="hint_palpite">Seu palpite (4 dígitos)</string>
+    <string name="btn_tentar">Tentar</string>
+    <string name="cofre_historico">Histórico</string>
+    <string name="cofre_historico_vazio">Nenhuma tentativa ainda.</string>
+    <string name="cofre_linha_historico">%1$d.</string>
+    <string name="erro_palpite_vazio">Digite um palpite</string>
+    <string name="erro_palpite_numeros">Use apenas números</string>
+    <string name="erro_palpite_tamanho">O palpite precisa ter exatamente %1$d dígitos</string>
+    <string name="erro_palpite_repetido">Não repita dígitos no palpite</string>
+    <string name="cofre_vitoria_titulo">Cofre aberto!</string>
+    <string name="cofre_vitoria_detalhe">Você descobriu o código %1$s usando %2$s. Tempo: %3$s.</string>
+    <string name="cofre_derrota_titulo">Cofre trancado</string>
+    <string name="cofre_derrota_detalhe">Você usou %2$s e não conseguiu abrir. O código era %1$s. Tempo: %3$s.</string>
+    <string name="tempo_segundos">%1$d s</string>
+    <string name="tempo_minutos">%1$d min %2$d s</string>
+    <plurals name="cofre_tentativas_usadas">
+        <item quantity="one">%1$d tentativa</item>
+        <item quantity="many">%1$d tentativas</item>
+        <item quantity="other">%1$d tentativas</item>
+    </plurals>
 </resources>

@@ -17,4 +17,8 @@
 
     <color name="vitoria">#2E7D32</color>
     <color name="derrota">#C62828</color>
+
+    <color name="pista_certa">#388E3C</color>
+    <color name="pista_outro_lugar">#FBC02D</color>
+    <color name="pista_ausente">#757575</color>
 </resources>
