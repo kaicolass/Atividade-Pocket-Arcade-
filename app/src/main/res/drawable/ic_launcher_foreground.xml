@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Reduzido para caber na área segura do ícone adaptativo -->
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.88"
+        android:scaleY="0.88">
+
+        <!-- Corpo do videogame -->
+        <path
+            android:fillColor="@color/roxo"
+            android:pathData="M38,24 L70,24 Q76,24 76,30 L76,78 Q76,84 70,84 L38,84 Q32,84 32,78 L32,30 Q32,24 38,24 Z" />
+
+        <!-- Tela -->
+        <path
+            android:fillColor="@color/ambar"
+            android:pathData="M38,30 L70,30 L70,52 L38,52 Z" />
+
+        <!-- Estrela na tela -->
+        <path
+            android:fillColor="@color/roxo_escuro"
+            android:pathData="M54,34 L56.4,39.2 L62,39.8 L57.8,43.6 L59,49 L54,46.2 L49,49 L50.2,43.6 L46,39.8 L51.6,39.2 Z" />
+
+        <!-- Direcional (cruz) -->
+        <path
+            android:fillColor="@color/branco"
+            android:pathData="M42,60 L46,60 L46,64 L50,64 L50,68 L46,68 L46,72 L42,72 L42,68 L38,68 L38,64 L42,64 Z" />
+
+        <!-- Botões A e B -->
+        <path
+            android:fillColor="@color/ambar"
+            android:pathData="M66,63 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+        <path
+            android:fillColor="@color/branco"
+            android:pathData="M60,70 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+        <!-- Alto-falante -->
+        <path
+            android:fillColor="@color/roxo_escuro"
+            android:pathData="M60,78 L70,78 L70,80 L60,80 Z" />
+    </group>
+</vector>
