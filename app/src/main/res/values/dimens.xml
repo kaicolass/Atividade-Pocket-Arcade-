@@ -12,6 +12,9 @@
 
     <!-- Componentes -->
     <dimen name="tamanho_logo">120dp</dimen>
+    <dimen name="tamanho_icone_painel">56dp</dimen>
+    <dimen name="padding_icone_painel">12dp</dimen>
     <dimen name="raio_card">6dp</dimen>
     <dimen name="elevacao_card">2dp</dimen>
+    <dimen name="espaco_entre_linhas">2dp</dimen>
 </resources>

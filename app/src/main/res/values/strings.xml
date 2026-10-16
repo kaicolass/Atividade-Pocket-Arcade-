@@ -17,4 +17,27 @@
     <string name="erro_apelido_curto">O apelido precisa ter pelo menos %1$d caracteres</string>
     <string name="ultimo_modulo">Último módulo usado: %1$s</string>
     <string name="autor_titulo">Desenvolvido por</string>
+
+    <string name="saudacao">Olá, %1$s!</string>
+    <string name="apelido_padrao">jogador</string>
+    <string name="central_instrucao">Escolha um desafio para jogar. Quando terminar, é só voltar para esta tela e tentar outro.</string>
+    <string name="central_rodape">Pocket Arcade · versão 1.0</string>
+    <string name="btn_abrir">Abrir</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="btn_encerrar_sessao">Encerrar sessão</string>
+
+    <string name="modulo_scanner">Scanner de Mensagens</string>
+    <string name="modulo_arena">Arena</string>
+    <string name="modulo_cofre">Cofre do Código Secreto</string>
+    <string name="modulo_randomizador">Randomizador</string>
+
+    <string name="descricao_scanner">Digite uma frase e veja quantas letras, palavras e vogais ela tem, como ela fica de trás para frente e se é um palíndromo.</string>
+    <string name="descricao_arena">Pedra, papel e tesoura contra o celular, em melhor de três. Quem vencer duas rodadas primeiro leva a partida.</string>
+    <string name="descricao_cofre">Descubra o código de 4 dígitos em até 8 tentativas. As cores de cada dígito mostram o quanto você chegou perto.</string>
+    <string name="descricao_randomizador">Monte uma lista de filmes, comidas, lugares ou desafios e deixe o app escolher um item por você.</string>
+
+    <string name="desc_icone_scanner">Ícone de lupa do Scanner de Mensagens</string>
+    <string name="desc_icone_arena">Ícone de troféu da Arena</string>
+    <string name="desc_icone_cofre">Ícone de cadeado do Cofre do Código Secreto</string>
+    <string name="desc_icone_randomizador">Ícone de dado do Randomizador</string>
 </resources>
