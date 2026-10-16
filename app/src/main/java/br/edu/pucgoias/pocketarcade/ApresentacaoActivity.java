@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +27,23 @@ public class ApresentacaoActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate");
 
         binding.btnEntrar.setOnClickListener(v -> animarBotaoEntrar());
+        mostrarUltimoModulo(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        mostrarUltimoModulo(intent);
+    }
+
+    private void mostrarUltimoModulo(Intent intent) {
+        String modulo = intent.getStringExtra(Constantes.EXTRA_MODULO);
+        if (modulo == null || modulo.trim().isEmpty()) {
+            return;
+        }
+        binding.txtUltimoModulo.setText(getString(R.string.ultimo_modulo, modulo));
+        binding.txtUltimoModulo.setVisibility(View.VISIBLE);
     }
 
     private void animarBotaoEntrar() {
