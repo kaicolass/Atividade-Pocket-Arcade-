@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cor principal (roxo) -->
+    <color name="roxo">#5E35B1</color>
+    <color name="roxo_escuro">#4527A0</color>
+    <color name="roxo_claro">#EDE7F6</color>
+
+    <!-- Cor de destaque -->
+    <color name="ambar">#FFB300</color>
+
+    <!-- Neutros -->
+    <color name="branco">#FFFFFF</color>
+    <color name="fundo">#F5F5F7</color>
+    <color name="borda">#E0E0E0</color>
+    <color name="texto_principal">#212121</color>
+    <color name="texto_secundario">#616161</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tamanhos de texto (apenas três) -->
+    <dimen name="texto_titulo">22sp</dimen>
+    <dimen name="texto_subtitulo">18sp</dimen>
+    <dimen name="texto_corpo">15sp</dimen>
+
+    <!-- Espaçamentos -->
+    <dimen name="espaco_pequeno">8dp</dimen>
+    <dimen name="espaco_medio">16dp</dimen>
+    <dimen name="espaco_grande">24dp</dimen>
+
+    <!-- Componentes -->
+    <dimen name="tamanho_logo">120dp</dimen>
+    <dimen name="raio_card">6dp</dimen>
+    <dimen name="elevacao_card">2dp</dimen>
+</resources>

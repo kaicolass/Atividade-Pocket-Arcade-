@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pocket Arcade</string>
+    <string name="app_subtitulo">Central de Desafios</string>
+
+    <!-- Autor (texto fixo) -->
+    <string name="autor_nome">Kaique Granato Santos Silva</string>
+    <string name="autor_matricula">Matrícula 20241012001030</string>
+    <string name="autor_curso">Análise e Desenvolvimento de Sistemas · PUC Goiás</string>
+
+    <!-- Acessibilidade -->
+    <string name="desc_logo">Logotipo do Pocket Arcade: um videogame portátil roxo</string>
+</resources>
