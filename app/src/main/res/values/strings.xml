@@ -55,4 +55,25 @@
     <string name="medida_palindromo">É palíndromo?</string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
+
+    <string name="arena_voce">Você</string>
+    <string name="arena_celular">Celular</string>
+    <string name="arena_versus">×</string>
+    <string name="arena_aguardando">Aguardando</string>
+    <string name="arena_inicio">Faça sua primeira jogada.</string>
+    <string name="arena_escolha">Escolha sua jogada</string>
+    <string name="jogada_pedra">Pedra</string>
+    <string name="jogada_papel">Papel</string>
+    <string name="jogada_tesoura">Tesoura</string>
+    <string name="rodada_vitoria">Você venceu a rodada!</string>
+    <string name="rodada_derrota">O celular venceu a rodada.</string>
+    <string name="rodada_empate">Empate. Ninguém marca ponto.</string>
+    <string name="campeao_jogador">Você é o campeão!\nPlacar final: %1$d a %2$d</string>
+    <string name="campeao_dispositivo">O celular é o campeão.\nPlacar final: %1$d a %2$d</string>
+    <string name="btn_nova_partida">Nova partida</string>
+    <string name="desc_jogar_pedra">Jogar pedra</string>
+    <string name="desc_jogar_papel">Jogar papel</string>
+    <string name="desc_jogar_tesoura">Jogar tesoura</string>
+    <string name="desc_escolha_jogador">Jogada escolhida por você</string>
+    <string name="desc_escolha_dispositivo">Jogada sorteada pelo celular</string>
 </resources>

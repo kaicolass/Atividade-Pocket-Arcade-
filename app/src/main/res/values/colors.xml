@@ -14,4 +14,7 @@
     <color name="borda">#E0E0E0</color>
     <color name="texto_principal">#212121</color>
     <color name="texto_secundario">#616161</color>
+
+    <color name="vitoria">#2E7D32</color>
+    <color name="derrota">#C62828</color>
 </resources>

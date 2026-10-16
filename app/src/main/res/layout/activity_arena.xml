@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo"
@@ -28,6 +29,312 @@
             android:layout_marginTop="@dimen/espaco_pequeno"
             android:text="@string/descricao_arena"
             android:textColor="@color/texto_secundario"
+            android:textSize="@dimen/texto_corpo" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPlacar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            app:cardBackgroundColor="@color/branco"
+            app:cardCornerRadius="@dimen/raio_card"
+            app:cardElevation="@dimen/elevacao_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/espaco_medio">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arena_voce"
+                        android:textColor="@color/texto_secundario"
+                        android:textSize="@dimen/texto_corpo" />
+
+                    <TextView
+                        android:id="@+id/txtPontosJogador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/roxo"
+                        android:textSize="@dimen/texto_titulo"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arena_versus"
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="@dimen/texto_titulo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arena_celular"
+                        android:textColor="@color/texto_secundario"
+                        android:textSize="@dimen/texto_corpo" />
+
+                    <TextView
+                        android:id="@+id/txtPontosDispositivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/roxo"
+                        android:textSize="@dimen/texto_titulo"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardConfronto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            app:cardBackgroundColor="@color/branco"
+            app:cardCornerRadius="@dimen/raio_card"
+            app:cardElevation="@dimen/elevacao_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_medio">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/arena_voce"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="@dimen/texto_corpo" />
+
+                        <ImageView
+                            android:id="@+id/imgEscolhaJogador"
+                            android:layout_width="@dimen/tamanho_jogada"
+                            android:layout_height="@dimen/tamanho_jogada"
+                            android:layout_marginTop="@dimen/espaco_pequeno"
+                            android:background="@drawable/fundo_icone"
+                            android:contentDescription="@string/desc_escolha_jogador"
+                            android:padding="@dimen/padding_jogada" />
+
+                        <TextView
+                            android:id="@+id/txtEscolhaJogador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/espaco_pequeno"
+                            android:textColor="@color/texto_principal"
+                            android:textSize="@dimen/texto_corpo"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arena_versus"
+                        android:textColor="@color/texto_secundario"
+                        android:textSize="@dimen/texto_titulo" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/arena_celular"
+                            android:textColor="@color/texto_secundario"
+                            android:textSize="@dimen/texto_corpo" />
+
+                        <ImageView
+                            android:id="@+id/imgEscolhaDispositivo"
+                            android:layout_width="@dimen/tamanho_jogada"
+                            android:layout_height="@dimen/tamanho_jogada"
+                            android:layout_marginTop="@dimen/espaco_pequeno"
+                            android:background="@drawable/fundo_icone"
+                            android:contentDescription="@string/desc_escolha_dispositivo"
+                            android:padding="@dimen/padding_jogada" />
+
+                        <TextView
+                            android:id="@+id/txtEscolhaDispositivo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/espaco_pequeno"
+                            android:textColor="@color/texto_principal"
+                            android:textSize="@dimen/texto_corpo"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtResultadoRodada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_medio"
+                    android:gravity="center"
+                    android:textSize="@dimen/texto_subtitulo"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtInstrucaoJogada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:gravity="center"
+            android:text="@string/arena_escolha"
+            android:textColor="@color/texto_secundario"
+            android:textSize="@dimen/texto_corpo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnPedra"
+                    android:layout_width="@dimen/tamanho_jogada"
+                    android:layout_height="@dimen/tamanho_jogada"
+                    android:background="@drawable/fundo_icone"
+                    android:contentDescription="@string/desc_jogar_pedra"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="@dimen/padding_jogada"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_pedra" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_pequeno"
+                    android:text="@string/jogada_pedra"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="@dimen/texto_corpo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnPapel"
+                    android:layout_width="@dimen/tamanho_jogada"
+                    android:layout_height="@dimen/tamanho_jogada"
+                    android:background="@drawable/fundo_icone"
+                    android:contentDescription="@string/desc_jogar_papel"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="@dimen/padding_jogada"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_papel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_pequeno"
+                    android:text="@string/jogada_papel"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="@dimen/texto_corpo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnTesoura"
+                    android:layout_width="@dimen/tamanho_jogada"
+                    android:layout_height="@dimen/tamanho_jogada"
+                    android:background="@drawable/fundo_icone"
+                    android:contentDescription="@string/desc_jogar_tesoura"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="@dimen/padding_jogada"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_tesoura" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_pequeno"
+                    android:text="@string/jogada_tesoura"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="@dimen/texto_corpo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCampeao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:gravity="center"
+            android:textSize="@dimen/texto_titulo"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnNovaPartida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/btn_nova_partida"
             android:textSize="@dimen/texto_corpo" />
 
         <Space
