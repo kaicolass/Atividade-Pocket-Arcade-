@@ -3,4 +3,7 @@
     <integer name="duracao_entrada_painel">600</integer>
     <integer name="atraso_entre_paineis">150</integer>
     <integer name="duracao_resultado">400</integer>
+    <integer name="duracao_escolha">450</integer>
+    <integer name="atraso_escolha_dispositivo">150</integer>
+    <integer name="duracao_campeao">600</integer>
 </resources>

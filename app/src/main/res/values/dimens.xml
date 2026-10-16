@@ -19,4 +19,6 @@
     <dimen name="espaco_entre_linhas">2dp</dimen>
     <dimen name="deslocamento_animacao">24dp</dimen>
     <dimen name="espessura_divisor">1dp</dimen>
+    <dimen name="tamanho_jogada">72dp</dimen>
+    <dimen name="padding_jogada">14dp</dimen>
 </resources>
