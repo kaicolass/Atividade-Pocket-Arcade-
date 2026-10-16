@@ -1,67 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo"
-    android:fillViewport="true"
     android:fitsSystemWindows="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/espaco_grande">
+        app:layout_constraintGuide_begin="@dimen/espaco_grande" />
 
-        <TextView
-            android:id="@+id/txtTitulo"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaFim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/espaco_grande" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_grande"
+        android:text="@string/modulo_randomizador"
+        android:textColor="@color/roxo"
+        android:textSize="@dimen/texto_titulo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_pequeno"
+        android:text="@string/descricao_randomizador"
+        android:textColor="@color/texto_secundario"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutValor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_medio"
+        android:hint="@string/hint_valor"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/txtDescricao">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editValor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/modulo_randomizador"
-            android:textColor="@color/roxo"
-            android:textSize="@dimen/texto_titulo"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtDescricao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_pequeno"
-            android:text="@string/descricao_randomizador"
-            android:textColor="@color/texto_secundario"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences"
+            android:maxLength="40"
+            android:maxLines="1"
             android:textSize="@dimen/texto_corpo" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_pequeno"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/layoutValor">
+
+        <Spinner
+            android:id="@+id/spinnerCategoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/espaco_pequeno"
+            android:text="@string/btn_adicionar"
+            android:textSize="@dimen/texto_corpo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAcoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/layoutCategoria">
+
+        <Button
+            android:id="@+id/btnAlternarLayout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/espaco_pequeno"
+            android:layout_weight="1"
+            android:text="@string/btn_ver_grade"
+            android:textSize="@dimen/texto_corpo" />
+
+        <Button
+            android:id="@+id/btnSortear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/espaco_pequeno"
+            android:layout_weight="1"
+            android:text="@string/btn_sortear"
+            android:textSize="@dimen/texto_corpo" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_pequeno"
+        app:cardBackgroundColor="@color/branco"
+        app:cardCornerRadius="@dimen/raio_card"
+        app:cardElevation="@dimen/elevacao_card"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/layoutAcoes">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/espaco_grande"
-            android:orientation="horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_medio">
 
-            <Button
-                android:id="@+id/btnVoltar"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/txtRotuloSorteio"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/espaco_pequeno"
-                android:layout_weight="1"
-                android:text="@string/btn_voltar"
+                android:gravity="center"
+                android:text="@string/random_resultado_inicial"
+                android:textColor="@color/texto_secundario"
                 android:textSize="@dimen/texto_corpo" />
 
-            <Button
-                android:id="@+id/btnEncerrarSessao"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/txtResultadoSorteio"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/espaco_pequeno"
-                android:layout_weight="1"
-                android:text="@string/btn_encerrar_sessao"
-                android:textSize="@dimen/texto_corpo" />
+                android:layout_marginTop="@dimen/margem_item"
+                android:gravity="center"
+                android:textColor="@color/roxo"
+                android:textSize="@dimen/texto_titulo"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtDicaLista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_medio"
+        android:text="@string/random_dica_lista"
+        android:textColor="@color/texto_secundario"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/cardResultado" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerItens"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margem_item"
+        android:layout_marginBottom="@dimen/espaco_pequeno"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/layoutRodape"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/txtDicaLista" />
+
+    <TextView
+        android:id="@+id/txtListaVazia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/random_lista_vazia"
+        android:textColor="@color/texto_secundario"
+        android:textSize="@dimen/texto_corpo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerItens"
+        app:layout_constraintEnd_toEndOf="@id/recyclerItens"
+        app:layout_constraintStart_toStartOf="@id/recyclerItens"
+        app:layout_constraintTop_toTopOf="@id/recyclerItens" />
+
+    <LinearLayout
+        android:id="@+id/layoutRodape"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/espaco_medio"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/espaco_pequeno"
+            android:layout_weight="1"
+            android:text="@string/btn_voltar"
+            android:textSize="@dimen/texto_corpo" />
+
+        <Button
+            android:id="@+id/btnEncerrarSessao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/espaco_pequeno"
+            android:layout_weight="1"
+            android:text="@string/btn_encerrar_sessao"
+            android:textSize="@dimen/texto_corpo" />
+
     </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

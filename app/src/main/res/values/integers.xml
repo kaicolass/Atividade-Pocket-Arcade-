@@ -8,4 +8,6 @@
     <integer name="duracao_campeao">600</integer>
     <integer name="duracao_linha_historico">300</integer>
     <integer name="duracao_tremer">500</integer>
+    <integer name="duracao_sorteio">500</integer>
+    <integer name="colunas_grade">2</integer>
 </resources>

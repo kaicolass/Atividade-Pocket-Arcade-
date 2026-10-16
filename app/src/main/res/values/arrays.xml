@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias">
+        <item>Filmes</item>
+        <item>Comidas</item>
+        <item>Lugares</item>
+        <item>Desafios</item>
+    </string-array>
+
+    <string-array name="exemplos_filmes">
+        <item>Interestelar</item>
+        <item>Toy Story</item>
+        <item>O Auto da Compadecida</item>
+    </string-array>
+
+    <string-array name="exemplos_comidas">
+        <item>Pamonha</item>
+        <item>Pizza</item>
+        <item>Açaí</item>
+    </string-array>
+
+    <string-array name="exemplos_lugares">
+        <item>Pirenópolis</item>
+        <item>Chapada dos Veadeiros</item>
+        <item>Parque Vaca Brava</item>
+    </string-array>
+
+    <string-array name="exemplos_desafios">
+        <item>Ficar um dia sem redes sociais</item>
+        <item>Beber dois litros de água</item>
+        <item>Ler dez páginas de um livro</item>
+    </string-array>
+</resources>

@@ -22,4 +22,5 @@
     <dimen name="tamanho_jogada">72dp</dimen>
     <dimen name="padding_jogada">14dp</dimen>
     <dimen name="padding_legenda">6dp</dimen>
+    <dimen name="margem_item">4dp</dimen>
 </resources>
