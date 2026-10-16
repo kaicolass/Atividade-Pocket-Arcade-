@@ -20,6 +20,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".CentralActivity"
+            android:exported="false"
+            android:parentActivityName=".ApresentacaoActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

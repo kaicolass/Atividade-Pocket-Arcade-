@@ -4,18 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo"
-    android:fitsSystemWindows="true"
-    android:padding="@dimen/espaco_grande">
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/espaco_grande" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaFim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/espaco_grande" />
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="@dimen/tamanho_logo"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/tamanho_logo"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/desc_logo"
         android:src="@drawable/ic_logo"
         app:layout_constraintBottom_toTopOf="@id/txtNomeApp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -28,9 +42,152 @@
         android:textColor="@color/roxo"
         android:textSize="@dimen/texto_titulo"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtSubtitulo"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_subtitulo"
+        android:textColor="@color/texto_secundario"
+        android:textSize="@dimen/texto_subtitulo"
+        app:layout_constraintBottom_toTopOf="@id/txtDescricao"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeApp" />
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_grande"
+        android:gravity="center"
+        android:text="@string/apresentacao_descricao"
+        android:textColor="@color/texto_principal"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintBottom_toTopOf="@id/layoutApelido"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtitulo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutApelido"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_grande"
+        android:hint="@string/hint_apelido"
+        app:layout_constraintBottom_toTopOf="@id/btnEntrar"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/txtDescricao">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editApelido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textSize="@dimen/texto_corpo" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_medio"
+        android:text="@string/btn_entrar"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintBottom_toTopOf="@id/txtUltimoModulo"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/layoutApelido" />
+
+    <TextView
+        android:id="@+id/txtUltimoModulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_medio"
+        android:textColor="@color/roxo"
+        android:textSize="@dimen/texto_corpo"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/espaco_grande"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/cardAutor"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio"
+        app:layout_constraintTop_toBottomOf="@id/btnEntrar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAutor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/espaco_medio"
+        app:cardBackgroundColor="@color/branco"
+        app:cardCornerRadius="@dimen/raio_card"
+        app:cardElevation="@dimen/elevacao_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guiaFim"
+        app:layout_constraintStart_toStartOf="@id/guiaInicio">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_medio">
+
+            <TextView
+                android:id="@+id/txtAutorTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/autor_titulo"
+                android:textColor="@color/texto_secundario"
+                android:textSize="@dimen/texto_corpo" />
+
+            <TextView
+                android:id="@+id/txtAutorNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_pequeno"
+                android:text="@string/autor_nome"
+                android:textColor="@color/texto_principal"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtAutorMatricula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/autor_matricula"
+                android:textColor="@color/texto_secundario"
+                android:textSize="@dimen/texto_corpo" />
+
+            <TextView
+                android:id="@+id/txtAutorCurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/autor_curso"
+                android:textColor="@color/texto_secundario"
+                android:textSize="@dimen/texto_corpo" />
+
+            <TextView
+                android:id="@+id/txtAutorInstituicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/autor_instituicao"
+                android:textColor="@color/texto_secundario"
+                android:textSize="@dimen/texto_corpo" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

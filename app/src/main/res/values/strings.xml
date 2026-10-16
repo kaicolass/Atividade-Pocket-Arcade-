@@ -5,8 +5,16 @@
     <!-- Autor (texto fixo) -->
     <string name="autor_nome">Kaique Granato Santos Silva</string>
     <string name="autor_matricula">Matrícula 20241012001030</string>
-    <string name="autor_curso">Análise e Desenvolvimento de Sistemas · PUC Goiás</string>
+    <string name="autor_curso">Análise e Desenvolvimento de Sistemas</string>
+    <string name="autor_instituicao">PUC Goiás</string>
 
     <!-- Acessibilidade -->
     <string name="desc_logo">Logotipo do Pocket Arcade: um videogame portátil roxo</string>
+
+    <string name="apresentacao_descricao">Quatro minijogos rápidos para testar sua atenção e sua sorte. Escolha um apelido para começar.</string>
+    <string name="hint_apelido">Seu apelido</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="erro_apelido_curto">O apelido precisa ter pelo menos %1$d caracteres</string>
+    <string name="ultimo_modulo">Último módulo usado: %1$s</string>
+    <string name="autor_titulo">Desenvolvido por</string>
 </resources>
