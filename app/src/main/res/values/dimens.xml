@@ -17,4 +17,6 @@
     <dimen name="raio_card">6dp</dimen>
     <dimen name="elevacao_card">2dp</dimen>
     <dimen name="espaco_entre_linhas">2dp</dimen>
+    <dimen name="deslocamento_animacao">24dp</dimen>
+    <dimen name="espessura_divisor">1dp</dimen>
 </resources>

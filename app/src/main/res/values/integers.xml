@@ -2,4 +2,5 @@
 <resources>
     <integer name="duracao_entrada_painel">600</integer>
     <integer name="atraso_entre_paineis">150</integer>
+    <integer name="duracao_resultado">400</integer>
 </resources>

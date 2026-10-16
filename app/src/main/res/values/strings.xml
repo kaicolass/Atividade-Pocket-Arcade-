@@ -40,4 +40,19 @@
     <string name="desc_icone_arena">Ícone de troféu da Arena</string>
     <string name="desc_icone_cofre">Ícone de cadeado do Cofre do Código Secreto</string>
     <string name="desc_icone_randomizador">Ícone de dado do Randomizador</string>
+
+    <string name="hint_mensagem">Digite uma mensagem</string>
+    <string name="btn_analisar">Analisar</string>
+    <string name="btn_limpar">Limpar</string>
+    <string name="erro_mensagem_curta">A mensagem precisa ter pelo menos %1$d caracteres</string>
+    <string name="scanner_titulo_resultado">Resultado da análise</string>
+    <string name="tabela_medida">Medida</string>
+    <string name="tabela_resultado">Resultado</string>
+    <string name="medida_caracteres">Caracteres sem espaços</string>
+    <string name="medida_palavras">Palavras</string>
+    <string name="medida_vogais">Vogais</string>
+    <string name="medida_invertido">Texto invertido</string>
+    <string name="medida_palindromo">É palíndromo?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
 </resources>

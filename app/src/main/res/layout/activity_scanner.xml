@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo"
@@ -29,6 +30,165 @@
             android:text="@string/descricao_scanner"
             android:textColor="@color/texto_secundario"
             android:textSize="@dimen/texto_corpo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutMensagem"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:hint="@string/hint_mensagem">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editMensagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="200"
+                android:maxLines="4"
+                android:textSize="@dimen/texto_corpo" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLimpar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/espaco_pequeno"
+                android:layout_weight="1"
+                android:text="@string/btn_limpar"
+                android:textSize="@dimen/texto_corpo" />
+
+            <Button
+                android:id="@+id/btnAnalisar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_pequeno"
+                android:layout_weight="1"
+                android:text="@string/btn_analisar"
+                android:textSize="@dimen/texto_corpo" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/branco"
+            app:cardCornerRadius="@dimen/raio_card"
+            app:cardElevation="@dimen/elevacao_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_medio">
+
+                <TextView
+                    android:id="@+id/txtTituloResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scanner_titulo_resultado"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="@dimen/texto_subtitulo"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:id="@+id/tabelaResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_pequeno"
+                    android:divider="@drawable/divisor_tabela"
+                    android:shrinkColumns="1"
+                    android:showDividers="middle"
+                    android:stretchColumns="1">
+
+                    <TableRow android:background="@color/roxo_claro">
+
+                        <TextView
+                            style="@style/CelulaTabela.Cabecalho"
+                            android:text="@string/tabela_medida" />
+
+                        <TextView
+                            style="@style/CelulaTabela.Cabecalho"
+                            android:text="@string/tabela_resultado" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/CelulaTabela"
+                            android:text="@string/medida_caracteres" />
+
+                        <TextView
+                            android:id="@+id/txtResCaracteres"
+                            style="@style/CelulaTabela" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/CelulaTabela"
+                            android:text="@string/medida_palavras" />
+
+                        <TextView
+                            android:id="@+id/txtResPalavras"
+                            style="@style/CelulaTabela" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/CelulaTabela"
+                            android:text="@string/medida_vogais" />
+
+                        <TextView
+                            android:id="@+id/txtResVogais"
+                            style="@style/CelulaTabela" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/CelulaTabela"
+                            android:text="@string/medida_invertido" />
+
+                        <TextView
+                            android:id="@+id/txtResInvertido"
+                            style="@style/CelulaTabela" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/CelulaTabela"
+                            android:text="@string/medida_palindromo" />
+
+                        <TextView
+                            android:id="@+id/txtResPalindromo"
+                            style="@style/CelulaTabela" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <Space
             android:layout_width="match_parent"
