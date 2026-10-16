@@ -56,9 +56,6 @@ def salvar(nome, amostras):
 
 
 def main():
-    # Clique: bipe curto e agudo
-    salvar("som_clique.wav", tom(1200, 0.06, 0.4, "quadrada"))
-
     # Vitória: arpejo subindo (dó, mi, sol, dó)
     vitoria = []
     for f in (523, 659, 784):
